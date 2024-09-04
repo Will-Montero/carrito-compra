@@ -1,111 +1,107 @@
- /* Estilos para la tarjeta */
-.card-container{
+/* Estilos para la tarjeta */
+.card-container {
   margin: 0 auto;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
-h2{
+h2 {
   text-align: center;
 }
 .card-tarjeta {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: rgba(136, 149, 233, 0.683);
+  color: aliceblue;
+}
+
+.card-tarjeta-imagen {
+  margin: 0 auto;
+  width: 30vw;
+  height: 20vh;
+  border-radius: 4px;
+}
+.card-tarjeta-contenido {
+  margin: 5px auto;
+  width: 90%;
+  height: 12vh;
+}
+
+.boton-agregar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 35vw;
+}
+
+.boton-agregar:hover {
+  background-color: #45a049;
+}
+.boton-quitar {
+  margin: 0 auto;
+  background-color: #af4c4c;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 35vw;
+}
+
+.boton-quitar:hover {
+  background-color: #a04545;
+}
+
+/* Estilos para el carrito */
+.carrito {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (min-width: 720px) {
+  .card-container {
     margin: 0 auto;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
     width: 100%;
-    background-color: rgba(136, 149, 233, 0.683);
-    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
-  
   .card-tarjeta-imagen {
     margin: 0 auto;
-    width: 30vw;
-    height: 20vh;
+    width: 20vw;
+    height: 30vh;
     border-radius: 4px;
-
   }
-  .card-tarjeta-contenido{
-    margin: 5px auto;
-    width: 90%;
-    height: 12vh;
-  }
-
-  
-  .boton-agregar {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0 auto;
-    width: 35vw;
-  }
-  
-  .boton-agregar:hover {
-    background-color: #45a049;
-  }
+  .boton-agregar,
   .boton-quitar {
+    width: 18vw;
+  }
+}
+@media (min-width: 1000px) {
+  .card-container {
     margin: 0 auto;
-    background-color: #af4c4c;
-    color: white;
-    border: none;
-    padding: 10px 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 35vw;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .boton-quitar:hover {
-    background-color: #a04545;
-  }
-  
-  /* Estilos para el carrito */
-  .carrito {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  @media(min-width: 720px){
-    .card-container{
-      margin: 0 auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .card-tarjeta-imagen {
-      margin: 0 auto;
-      width: 20vw;
-      height: 30vh;
-      border-radius: 4px;
-  
-    }
-    .boton-agregar, .boton-quitar {
 
-      width: 18vw;
-    }
-
-  }
-  @media(min-width: 1000px){
-    .card-container{
-      margin: 0 auto;
-      width: 80%;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-     
   .card-tarjeta-imagen {
     margin: 0 auto;
     width: 15vw;
     height: 35vh;
     border-radius: 4px;
-
   }
-  .boton-agregar, .boton-quitar {
+  .boton-agregar,
+  .boton-quitar {
     width: 10vw;
   }
-  }
+}

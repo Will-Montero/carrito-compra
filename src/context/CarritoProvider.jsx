@@ -2,9 +2,9 @@ import { useReducer } from 'react'
 import { CarritoContext } from './CarritoContext'
 
 
-const estadoIncial = []
+const estadoInicial = []
 
-const productosReducer = async (state = estadoIncial, action = {}) => {
+const productosReducer = async (state = estadoInicial, action = {}) => {
     switch (action.value) {
         case '[COMPRA]: Agregar compra':
             return [...state, action.payload]
@@ -35,9 +35,11 @@ const productosReducer = async (state = estadoIncial, action = {}) => {
 
 export const CarritoProvider = ({ children }) => {
 
-    const [stateProductos, dispatch] = useReducer(productosReducer, estadoIncial)
+    const [stateProductos, dispatch] = useReducer(productosReducer, estadoInicial)
 
     const AgregarCompra = (compra) => {
+
+        compra.cantidad = 1
         const action = {
             type: '[COMPRA]: Agregar compra',
             payload: compra

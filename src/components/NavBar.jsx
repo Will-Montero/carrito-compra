@@ -17,9 +17,11 @@ export const NavBar = () => {
         <NavLink to='/' className="navbar-brand">
           Productos
         </NavLink>
-        <Badge badgeContent={stateProductos.length} color="secondary">
+       <NavLink to='/carrito'>
+       <Badge badgeContent={stateProductos.length} color="secondary">
             <ShoppingCartIcon  color="action" />
        </Badge>
+       </NavLink>
         <button
           className="navbar-toggler"
           type="button"
