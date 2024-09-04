@@ -5,7 +5,7 @@ import { useContext } from 'react'
 export const ProductosPage = () => {
 
  const { productos } = useContext(ProductosContext)
- const { AgregarCompra, EliminarCompra } = useContext(CardProductos)
+ const { AgregarCompra, EliminarCompra } = useContext(CarritoContext)
 
  const handleAgregar = (compra) => {
   AgregarCompra(compra)
