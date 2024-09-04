@@ -20,13 +20,21 @@ export const CardProductos = ({
     setAñadir(false);
     handleEliminar();
   };
+
+  const limitarPalabras = (texto, maxPalabras) => {
+    const palabras = texto.split(" ");
+    if (palabras.length > maxPalabras) {
+      return palabras.slice(0, maxPalabras).join(" ") + "...";
+    }
+    return texto;
+  };
   return (
    
       <div className="card-tarjeta">
         <img src={imagen} alt={titulo} className="card-tarjeta-imagen" />
 
         <div className="card-tarjeta-contenido">
-          <h6 className="card-imagen-titulo">{titulo}</h6>
+          <h6 className="card-imagen-titulo">{limitarPalabras(titulo, 3)}</h6>
           <p className="card-imagen-categoria">{categoria}</p>
           <p className="imagen-precio">{precio}</p>
         </div>

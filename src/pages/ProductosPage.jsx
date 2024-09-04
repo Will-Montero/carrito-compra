@@ -19,7 +19,7 @@ export const ProductosPage = () => {
 
   return (
    <>
-   <h1>Productos</h1>
+   <h2>Productos</h2>
   <div className='card-container'>
   {productos.map(producto => {
     return (
