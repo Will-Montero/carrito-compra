@@ -68,7 +68,7 @@ export const CarritoProvider = ({ children }) => {
 
 
   return (
-    <CarritoContext.Provider value={{stateProductos, AumentarCompra, DisminuirCompra, EliminarCompra}}>
+    <CarritoContext.Provider value={{stateProductos, AgregarCompra, AumentarCompra, DisminuirCompra, EliminarCompra}}>
         { children }
     </CarritoContext.Provider>
   )

@@ -1,6 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { CarritoContext } from "../context/CarritoContext";
+import { useContext } from "react";
+import { Badge } from "@mui/material";
+import  ShoppingCartIcon  from '@mui/icons-material/ShoppingCart';
 
 export const NavBar = () => {
+
+  const { stateProductos } = useContext(CarritoContext)
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -25,12 +32,10 @@ export const NavBar = () => {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
-            </li>
           </ul>
+          <Badge badgeContent={stateProductos.length} color="secondary">
+            <ShoppingCartIcon  color="action" />
+            </Badge>
         </div>
       </div>
     </nav>
