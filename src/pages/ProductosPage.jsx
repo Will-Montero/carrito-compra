@@ -2,6 +2,7 @@ import {CardProductos } from '../components/CardProductos'
 import { ProductosContext } from '../context/ProductosContext'
 import { CarritoContext } from '../context/CarritoContext'
 import { useContext } from 'react'
+import '../styles/cardProductos.css'
 export const ProductosPage = () => {
 
  const { productos } = useContext(ProductosContext)
@@ -19,9 +20,10 @@ export const ProductosPage = () => {
   return (
    <>
    <h1>Productos</h1>
-   {productos.map(producto => {
+  <div className='card-container'>
+  {productos.map(producto => {
     return (
-      <CardProductos
+       <CardProductos
       key={producto.id}
       titulo={producto.title}
       precio={producto.price}
@@ -30,8 +32,10 @@ export const ProductosPage = () => {
       handleAgregar={() => handleAgregar(producto)}
       handleEliminar={() => handleEliminar(producto.id)}
       ></CardProductos>
+   
     )
    })}
+  </div>
    </>
   )
 }
