@@ -46,7 +46,7 @@ export const CardProductos = ({
             type="button"
           >
             {" "}
-            Eliminar del carrito
+            Quitar del carrito
           </button>
         ) : (
           <button onClick={clickAñadir} className="boton-agregar" type="button">

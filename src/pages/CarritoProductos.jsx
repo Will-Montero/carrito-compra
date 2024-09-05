@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CarritoContext } from '../context/CarritoContext';
+import '../styles/carritoPage.css'
 
 export const CarritoProductos = () => {
   const { stateProductos, AumentarCompra, DisminuirCompra, EliminarCompra } = useContext(CarritoContext);
@@ -11,39 +12,46 @@ export const CarritoProductos = () => {
   const handleImpresion = () => {
     print();
   };
+  const limitarPalabras = (texto, maxPalabras) => {
+    const palabras = texto.split(" ");
+    if (palabras.length > maxPalabras) {
+      return palabras.slice(0, maxPalabras).join(" ") + "...";
+    }
+    return texto;
+  };
 
   return (
-    <>
-      <table className="table">
+    <div className="carrito-container">
+      <table className="carrito-table">
         <thead>
           <tr>
-            <th scope="col">Producto</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Acciones</th>
+            <th scope="carrito-table-header">Producto</th>
+            <th scope="carrito-table-header">Precio</th>
+            <th scope="carrito-table-header">Cantidad</th>
+            <th scope="carrito-table-header">Acciones</th>
           </tr>
         </thead>
         <tbody>
           {stateProductos.map((item) => (
             <tr key={item.id}>
-              <td>{item.title}</td>
-              <td>{item.price}</td>
-              <td>
+              <td className="carrito-item">{limitarPalabras(item.title, 3)}</td>
+              <td className="carrito-item">${item.price}</td>
+              <td className="carrito-item">
                 <button
-                  className="btn btn-danger"
+                  className="boton-disminuir"
                   onClick={() => DisminuirCompra(item.id)}
                 >
                   -
                 </button>
-                <button>{item.cantidad}</button>
+                <button className="boton-cantidad">{item.cantidad}</button>
                 <button
-                  className="btn btn-primary"
+                  className="boton-aumentar"
                   onClick={() => AumentarCompra(item.id)}
                 >
                   +
                 </button>
               </td>
-              <td>
+              <td className="carrito-item">
                 <button
                   className="btn btn-danger"
                   onClick={() => EliminarCompra(item.id)}
@@ -60,15 +68,15 @@ export const CarritoProductos = () => {
           </tr>
         </tbody>
       </table>
-      <div className="d-grid gap-2">
+      <div>
         <button
           onClick={handleImpresion}
           disabled={stateProductos.length < 1}
-          className="btn btn-primary"
+          className="boton-comprar"
         >
           Comprar
         </button>
       </div>
-    </>
+    </div>
   );
 };
