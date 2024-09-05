@@ -4,8 +4,8 @@ import { CarritoContext } from './CarritoContext'
 
 const estadoInicial = []
 
-const productosReducer = async (state = estadoInicial, action = {}) => {
-    switch (action.value) {
+const productosReducer =  (state = estadoInicial, action = {}) => {
+    switch (action.type) {
         case '[COMPRA]: Agregar compra':
             return [...state, action.payload]
         case '[COMPRA]: Aumentar compra':
@@ -20,7 +20,7 @@ const productosReducer = async (state = estadoInicial, action = {}) => {
             return state.map( item => 
                 {
                     const cant = item.cantidad - 1;
-                    if(item.id === action.payloadn && item.cantidad > 1) return {...item, cantidad: cant}
+                    if(item.id === action.payload && item.cantidad > 1) return {...item, cantidad: cant}
                     return item
                 } 
                 )
