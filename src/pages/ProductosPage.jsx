@@ -18,8 +18,10 @@ export const ProductosPage = () => {
 
 
   return (
-   <>
+   <div className='productos-container'>
+    <br />
    <h2>Productos</h2>
+   <br />
   <div className='card-container'>
   {productos.map(producto => {
     return (
@@ -36,6 +38,6 @@ export const ProductosPage = () => {
     )
    })}
   </div>
-   </>
+   </div>
   )
 }

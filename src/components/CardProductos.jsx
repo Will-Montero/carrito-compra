@@ -36,7 +36,7 @@ export const CardProductos = ({
         <div className="card-tarjeta-contenido">
           <h6 className="card-imagen-titulo">{limitarPalabras(titulo, 3)}</h6>
           <p className="card-imagen-categoria">{categoria}</p>
-          <p className="imagen-precio">{precio}</p>
+          <p className="imagen-precio">${precio}</p>
         </div>
 
         {añadir ? (

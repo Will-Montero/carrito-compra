@@ -1,4 +1,9 @@
 .navbar{
     width: 100%;
     margin: 0 auto;
+    background-color: rgb(24, 19, 19) !important;
+    
+}
+.navbar-brand, .navbar-toggler, .nav-link{ 
+    color: aliceblue !important;
 }
