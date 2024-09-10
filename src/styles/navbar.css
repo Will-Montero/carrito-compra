@@ -1,9 +1,29 @@
 .navbar{
-    width: 100%;
+    width: 100% !important;
     margin: 0 auto;
     background-color: rgb(4, 4, 4) !important;
-    
 }
-.navbar-brand, .navbar-toggler, .nav-link{ 
+.badge{
+    padding-right: 165px;
+}
+.navbar-brand, .nav-link, .collapse{ 
     color: aliceblue !important;
+}
+.navbar-toggler {
+    border-color: aliceblue !important; /* Cambia el color del borde del botón */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='aliceblue' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  }
+  
+
+@media(min-width: 1000px){
+   .navbar {
+    width: 80% !important;
+   }
+   .badge{
+    padding-right: 0;
+}
+
 }

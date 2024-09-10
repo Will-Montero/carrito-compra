@@ -18,7 +18,7 @@ export const NavBar = () => {
           Productos
         </NavLink>
        <NavLink to='/carrito'>
-       <Badge badgeContent={stateProductos.length} color="secondary">
+       <Badge className='badge'  badgeContent={stateProductos.length} color="secondary">
             <ShoppingCartIcon  sx={{ color: 'white' }}  />
        </Badge>
        </NavLink>
@@ -29,7 +29,7 @@ export const NavBar = () => {
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Toggle-navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
