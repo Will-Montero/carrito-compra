@@ -2,7 +2,8 @@
     width: 100% !important;
     margin: 0 auto;
     background-color: rgb(4, 4, 4) !important;
-    position: fixed;
+    position: fixed !important;
+    z-index: 10;
     
 }
 .badge{
