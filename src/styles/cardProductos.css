@@ -25,6 +25,7 @@ h2 {
   margin-bottom: 10px;
   width: 100%;
   height: 39vh;
+  z-index: 1;
   background-color: rgba(39, 40, 43, 0.683);
   color: aliceblue;
 }
