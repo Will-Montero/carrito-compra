@@ -4,6 +4,7 @@ import { ProductosProvider } from './context/ProductosProvider'
 import { Routes, Route, Navigate } from "react-router-dom"
 import { ProductosPage } from "./pages/ProductosPage"
 import { CarritoProductos } from "./pages/CarritoProductos"
+import { Footer } from "./components/Footer"
 
 export const CarritoApp = () => {
   return (
@@ -15,6 +16,7 @@ export const CarritoApp = () => {
       <Route path="/carrito" element={<CarritoProductos/>}></Route>
       <Route path="/*" element={<Navigate to='/'/>}></Route>
       </Routes>
+      <Footer/>
       </CarritoProvider>
     </ProductosProvider>
   )

@@ -1,0 +1,11 @@
+.footer{
+    display: flex;
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+    
+
+}
+.footer-text {
+    margin: 2rem auto;
+    color: rgb(255, 255, 255);
+}
