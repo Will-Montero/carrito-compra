@@ -29,6 +29,10 @@ h2 {
   color: aliceblue;
 }
 
+.card-tarjeta:hover {
+ transform: scale(1.02);
+}
+
 .card-tarjeta-imagen {
   margin: 0 auto;
   width: 38vw;
