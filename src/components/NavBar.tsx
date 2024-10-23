@@ -1,29 +1,26 @@
-import '../styles/navbar.css'
-import { NavLink } from "react-router-dom";
-import { CarritoContext } from "../context/CarritoContext";
-import { useContext } from "react";
-import { Badge } from "@mui/material";
-import  ShoppingCartIcon  from '@mui/icons-material/ShoppingCart';
+import React, { useContext } from 'react';
+import '../styles/navbar.css';
+import { NavLink } from 'react-router-dom';
+import { CarritoContext } from '../context/CarritoContext';
+import { Badge } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-
-export const NavBar = () => {
-
-  const { stateProductos } = useContext(CarritoContext)
+export const NavBar: React.FC = () => {
+  const { stateProductos } = useContext(CarritoContext);
 
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-     
       <div className="container-fluid">
         <NavLink to='/' className="navbar-brand">
           Productos
         </NavLink>
-       <NavLink to='/carrito'>
-       <div className='badge'>
-       <Badge  badgeContent={stateProductos.length} color="secondary">
-            <ShoppingCartIcon  sx={{ color: 'white' }}  />
-       </Badge>
-       </div>
-       </NavLink>
+        <NavLink to='/carrito'>
+          <div className='badge'>
+            <Badge badgeContent={stateProductos.length} color="secondary">
+              <ShoppingCartIcon sx={{ color: 'white' }} />
+            </Badge>
+          </div>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -43,10 +40,8 @@ export const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-         
         </div>
       </div>
-      
     </nav>
   );
 };
